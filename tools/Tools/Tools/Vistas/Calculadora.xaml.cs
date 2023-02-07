@@ -18,7 +18,7 @@ namespace Tools.Vistas
 		{
 			InitializeComponent ();
 
-			pickerOperacion.Items.Add("Suma");
+            pickerOperacion.Items.Add("Suma");
             pickerOperacion.Items.Add("Resta");
             pickerOperacion.Items.Add("Multiplicación");
             pickerOperacion.Items.Add("División");

@@ -5,14 +5,6 @@
              Visual="Material"
              Title="Conversor de Unidades">
     <ContentPage.Content>
-        <!--Definicion de numero de filas en grid con *-->
-        <!--<Grid RowDefinitions="*,*"
-          ColumnDefinitions="*,*">
-        -->
-        <!--Definicion de posicion donde se colocara el button refrente a fila y columna-->
-        <!--
-        <Button Text="Hola" Grid.Row="1" Grid.Column="1"/>
-    </Grid>-->
         <ScrollView>
             <Grid>
                 <StackLayout VerticalOptions="Center"

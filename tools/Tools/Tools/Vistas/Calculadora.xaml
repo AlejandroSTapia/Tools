@@ -8,39 +8,41 @@
         <ScrollView>
         <Grid>
             <StackLayout VerticalOptions="Center"
-                         Margin="40"
-                         Spacing="30">
+                         Margin="40">
                 <Label Text="Calculadora"
                        FontAttributes="Bold"
                        FontSize="40"
                        HorizontalTextAlignment="Center"
                        TextColor="#565168" />
-                <Image Source="cinta_metrica.png"
+                <Image Source="calculadora1.png"
                        WidthRequest="170" />
 
-                <Entry Keyboard="Numeric"
-                       Placeholder="Primer numero"
-                       TextColor="Green"
-                       PlaceholderColor="Gray"
-                       FontSize="Large"
-                       x:Name="txtNum1" />
 
-                <Entry Keyboard="Numeric"
-                       Placeholder="Segundo numero"
+                    <Entry Keyboard="Numeric"
+                           Placeholder="0"
+                           TextColor="Green"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center"
+                           PlaceholderColor="Gray"
+                           FontSize="Large"
+                           x:Name="txtNum1" />
+
+                    <Entry Keyboard="Numeric"
+                       Placeholder="0"
                        TextColor="Green"
-                       PlaceholderColor="Gray"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center"
+                           PlaceholderColor="Gray"
                        FontSize="Large"
                        x:Name="txtNum2" />
                 
                 <StackLayout>
-                    <Label Text="Seleccione Operación "
-                           FontSize="Medium"
-                           FontAttributes="Italic"
-                           VerticalOptions="Center" />
-
-                        <Picker Title="--Seleccione--"
+                
+                        <Picker Title="--Operación--"
                                 x:Name="pickerOperacion"
-                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                HorizontalOptions="Center"
+                                WidthRequest="180"
                                 SelectedIndexChanged="pickerOperacion_SelectedIndexChanged">
                         </Picker>
 

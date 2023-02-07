@@ -151,4 +151,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\drawable\cinta_metrica.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\calculadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\calculadora1.png" />
+  </ItemGroup>
 </Project>

@@ -6,8 +6,7 @@
              Title="Calculadora de IMC">
     <ContentPage.Content>
         <StackLayout
-                     Margin="40"
-                     Spacing="30">
+                     Margin="40">
             <Label Text="Calcula tu IMC"
                    FontAttributes="Bold"
                    FontSize="40"
@@ -15,10 +14,10 @@
                    TextColor="#565168"/>
             <Image Source="imc.png"
                    WidthRequest="170" />
-            <Entry Placeholder="Altura" 
+            <Entry Placeholder="Altura (Metros)" 
                    x:Name="Altura"
                    Keyboard="Numeric"/>
-            <Entry Placeholder="Peso" 
+            <Entry Placeholder="Peso (Kg)" 
                    x:Name="Peso"
                    Keyboard="Numeric"/>
             <Frame HasShadow="False"

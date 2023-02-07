@@ -10,10 +10,8 @@
                    FontAttributes="Bold"
                    Margin="0,20,0,0"
                    HorizontalOptions="Center" />
-            <!--CONtenedor o llamado Decorador, este a diferencia de los otros contenedore como stacklayout o grid
+            <!--CONtenedor o llamado Decorador, este
             solo puede contener un solo elemento-->
-            <!--FillandExpand=Rellena y expande, y colocamos un margen alrededor, 
-            corderradius es para los bordes redondos propios de frame-->
             <Frame VerticalOptions="FillAndExpand"
                    Margin="20,20"
                    CornerRadius="10"
@@ -34,12 +32,20 @@
                                  VerticalOptions="CenterAndExpand" 
                                  WidthRequest="80"
                                  Clicked="ImageButton_Clicked"/>
+                        
                     <ImageButton Source="m_to_cm.png"
                                  BackgroundColor="Transparent"
                                  HorizontalOptions="Center"
                                  VerticalOptions="CenterAndExpand"
                                  WidthRequest="70"
                                  Clicked="ImageButton_Clicked_1" />
+
+                        <ImageButton Source="calculadora.png"
+                                     BackgroundColor="Transparent"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="CenterAndExpand"
+                                     WidthRequest="80"
+                                     Clicked="ImageButton_Clicked_2"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>

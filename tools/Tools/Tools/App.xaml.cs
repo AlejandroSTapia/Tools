@@ -10,7 +10,7 @@ namespace Tools
             InitializeComponent();
 
            // MainPage = new MenuPrincipal();
-            MainPage = new NavigationPage(new ConversorMaCm());
+            MainPage = new NavigationPage(new MenuPrincipal());
         }
 
         protected override void OnStart()

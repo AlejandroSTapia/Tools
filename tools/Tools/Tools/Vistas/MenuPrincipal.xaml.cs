@@ -30,5 +30,10 @@ namespace Tools.Vistas
         {
             Navigation.PushAsync(new ConversorMaCm());
         }
+
+        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Calculadora());
+        }
     }
 }
