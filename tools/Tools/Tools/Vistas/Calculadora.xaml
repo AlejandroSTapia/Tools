@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tools.Vistas.Calculadora"
+             Visual="Material"
+             Title="Calculadora">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid>
+            <StackLayout VerticalOptions="Center"
+                         Margin="40"
+                         Spacing="30">
+                <Label Text="Calculadora"
+                       FontAttributes="Bold"
+                       FontSize="40"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#565168" />
+                <Image Source="cinta_metrica.png"
+                       WidthRequest="170" />
+
+                <Entry Keyboard="Numeric"
+                       Placeholder="Primer numero"
+                       TextColor="Green"
+                       PlaceholderColor="Gray"
+                       FontSize="Large"
+                       x:Name="txtNum1" />
+
+                <Entry Keyboard="Numeric"
+                       Placeholder="Segundo numero"
+                       TextColor="Green"
+                       PlaceholderColor="Gray"
+                       FontSize="Large"
+                       x:Name="txtNum2" />
+                
+                <StackLayout>
+                    <Label Text="Seleccione Operación "
+                           FontSize="Medium"
+                           FontAttributes="Italic"
+                           VerticalOptions="Center" />
+
+                        <Picker Title="--Seleccione--"
+                                x:Name="pickerOperacion"
+                                HorizontalOptions="FillAndExpand"
+                                SelectedIndexChanged="pickerOperacion_SelectedIndexChanged">
+                        </Picker>
+
+                </StackLayout>
+
+
+                <Button Text="Calcular"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        BackgroundColor="DarkMagenta"
+                        TextColor="White"
+                        x:Name="btnCalcular"
+                        Clicked="btnCalcular_Clicked" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Resultado: "
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" />
+                    <Label Text="0.00"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           x:Name="lblResultado" />
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
