@@ -14,6 +14,8 @@ namespace Tools.Vistas
 	{
         //almacenar res
         double res = 0;
+
+        String operacion;
         public Calculadora ()
 		{
 			InitializeComponent ();
@@ -28,27 +30,8 @@ namespace Tools.Vistas
         private void pickerOperacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Variable para captura de elemento seleccionado
-            String operacion = pickerOperacion.SelectedItem.ToString();
-            int n1 = Int32.Parse(txtNum1.Text);
-            int n2 = Int32.Parse(txtNum2.Text);
+            operacion = pickerOperacion.SelectedItem.ToString();
 
-         
-
-            //opcion almacenada
-            if (operacion == "Suma" )
-            {
-                res = n1 + n2;
-            }
-            else if (operacion == "Resta")
-            {
-                res = n1 - n2;
-            }
-            else if (operacion == "Multiplicación")
-            {
-                res = n1 * n2;
-            }
-            else
-                res = n1 / n2;
 
         }
 
@@ -57,7 +40,34 @@ namespace Tools.Vistas
             //Si es diferente de vacio, entonces llama la funcion
             if (!string.IsNullOrEmpty(txtNum1.Text) && !string.IsNullOrEmpty(txtNum2.Text))
             {
+
+
+                int n1 = Int32.Parse(txtNum1.Text);
+                int n2 = Int32.Parse(txtNum2.Text);
+
+
+
+                //opcion almacenada
+                if (operacion == "Suma")
+                {
+                    res = n1 + n2;
+                }
+                else if (operacion == "Resta")
+                {
+                    res = n1 - n2;
+                }
+                else if (operacion == "Multiplicación")
+                {
+                    res = n1 * n2;
+                }
+                else
+                    res = n1 / n2;
+
                 lblResultado.Text = res.ToString(); ;
+            }
+            else if (operacion == "--Operación--")
+            {
+                DisplayAlert("Error", "Ingrese una operación válida", "OK");
             }
             else
             {
