@@ -62,6 +62,9 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -123,6 +126,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
@@ -146,9 +152,6 @@
     <BundleResource Include="Resources\drawable\imc.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\drawable\m_to_cm.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\drawable\cinta_metrica.png" />
   </ItemGroup>
   <ItemGroup>
@@ -156,5 +159,17 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\drawable\calculadora1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\informacionPersonal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\calc_conv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\toolbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\change.png" />
   </ItemGroup>
 </Project>

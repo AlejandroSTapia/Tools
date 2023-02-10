@@ -23,7 +23,7 @@ namespace Tools
             if (!string.IsNullOrEmpty(Altura.Text) &&
                 !string.IsNullOrEmpty(Peso.Text))
             {
-                //Obtener datos de los campos de texto
+                //datos obtenidos y parseados de los campos de texto
                 var altura = double.Parse(Altura.Text);
                 var peso = double.Parse(Peso.Text);
 

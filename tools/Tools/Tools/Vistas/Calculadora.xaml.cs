@@ -16,6 +16,7 @@ namespace Tools.Vistas
         double res = 0;
 
         String operacion;
+
         public Calculadora ()
 		{
 			InitializeComponent ();
@@ -41,13 +42,13 @@ namespace Tools.Vistas
             if (!string.IsNullOrEmpty(txtNum1.Text) && !string.IsNullOrEmpty(txtNum2.Text))
             {
 
-
+                //Parseo de campos a int para operaciones
                 int n1 = Int32.Parse(txtNum1.Text);
                 int n2 = Int32.Parse(txtNum2.Text);
 
 
 
-                //opcion almacenada
+                //condicion piker seleccionado
                 if (operacion == "Suma")
                 {
                     res = n1 + n2;
@@ -63,16 +64,18 @@ namespace Tools.Vistas
                 else
                     res = n1 / n2;
 
-                lblResultado.Text = res.ToString(); ;
+                //resultado parseado en lbl
+                lblResultado.Text = res.ToString(); 
             }
+
             else if (operacion == "--Operación--")
             {
                 DisplayAlert("Error", "Ingrese una operación válida", "OK");
             }
             else
             {
-                //display alert te pide 3 coasas(titulo, mensaje, palabra del botn de cierre
-                DisplayAlert("Error", "Ingrese una cantidad", "OK");
+                //display alert(titulo, mensaje, palabra del botn de cierre
+                DisplayAlert("Error", "Debe ingresar cantidad", "OK");
             }
         }
 

@@ -53,7 +53,7 @@ namespace Tools.Vistas
 
         private void validar()
         {
-            //validad que tmabien sea mayor a 0, validar tambien que no se salga al darle regresar
+            // validar tambien que no se salga al darle regresar
             //Si es diferente de vacio, entonces llama la funcion
             if (!string.IsNullOrEmpty(txtCantidad.Text))
             {
@@ -64,7 +64,7 @@ namespace Tools.Vistas
                 //opcion almacenada
                 if (long1 == "Centimetros" && long2 == "Metros")
                 {
-                    res = longitud * 100;
+                    res = longitud / 100;
                 }
                 else if (long1 == "Centimetros" && long2 == "Kilometros")
                 {
@@ -94,7 +94,7 @@ namespace Tools.Vistas
                 else if (long1 == "Yardas" && long2 == "Centimetros")
                 {
                     res = longitud * 91.44;
-                }//ya
+                }
 
 
 
@@ -109,7 +109,7 @@ namespace Tools.Vistas
                 else if (long1 == "Metros" && long2 == "Yardas")
                 {
                     res = longitud * 1.094;
-                }//ya
+                }
 
                 else if (long1 == "Kilometros" && long2 == "Metros")
                 {
@@ -122,7 +122,7 @@ namespace Tools.Vistas
                 else if (long1 == "Yardas" && long2 == "Metros")
                 {
                     res = longitud / 1.094;
-                }//ya
+                }
 
 
 
@@ -177,16 +177,13 @@ namespace Tools.Vistas
 
 
 
-                lblResultado.Text = res.ToString(); ;
+                lblResultado.Text = res.ToString();
             }
-            //else if (longitud <=0)
-            //{
-            //    DisplayAlert("Error", "La longitud no puede ser igual a 0", "OK");
-            //}
+    
             else
             {
                 //display alert te pide 3 coasas(titulo, mensaje, palabra del botn de cierre
-                DisplayAlert("Error", "Ingrese una cantidad", "OK");
+                DisplayAlert("Error", "Debe ingresar cantidad", "OK");
             }
         }
 

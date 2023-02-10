@@ -2,42 +2,69 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tools.Vistas.MenuPrincipal"
-             Title="">
+             Visual="Material">
     <ContentPage.Content>
         <StackLayout >
-            <Label Text="Herramientas"
-                   FontSize="40"
-                   FontAttributes="Bold"
-                   Margin="0,20,0,0"
-                   HorizontalOptions="Center" />
-            <!--CONtenedor o llamado Decorador, este
+            
+            <!--Contenedor o llamado Decorador, este
             solo puede contener un solo elemento-->
             <Frame VerticalOptions="FillAndExpand"
-                   Margin="20,20"
+                   Margin="10,10"
                    CornerRadius="10"
                    HasShadow="False">
-                <StackLayout VerticalOptions="Center"
-                             Spacing="20">
-                    <Image Source="design_tool512.png" />
-                    <Label Text="Opciones"
-                           FontAttributes="Bold"
+                <StackLayout Spacing="15">
+
+                    <Label Text="Herramientas"
                            FontSize="40"
+                           FontAttributes="Bold"
+                           Margin="0,5,0,0"
+                           HorizontalOptions="Center" />
+                    
+                    <Image Source="toolbox.png" 
+                           HeightRequest="200"/>
+                    <Label Text="Utilidades"
+                           FontAttributes="Bold"
+                           FontSize="22"
                            HorizontalOptions="Center" />
 
-                    <StackLayout Orientation="Horizontal" 
+                    <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="Center">
-                    <ImageButton Source="imc2.png"
+                        <Label Text="IMC"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               Margin="20,0,10,0"/>
+
+                        <Label Text="Conversor"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                              
+                               Margin="40,0,0,0"/>
+
+                        <Label Text="Calculadora"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                           
+                               Margin="22,0,0,0"
+                              />
+                    </StackLayout>
+                    
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 Spacing="28">
+                        
+                        <ImageButton Source="imc2.png"
                                  BackgroundColor="Transparent"
                                  HorizontalOptions="Center"
                                  VerticalOptions="CenterAndExpand" 
                                  WidthRequest="80"
                                  Clicked="ImageButton_Clicked"/>
                         
-                    <ImageButton Source="m_to_cm.png"
+                    <ImageButton Source="change.jpg"
                                  BackgroundColor="Transparent"
                                  HorizontalOptions="Center"
                                  VerticalOptions="CenterAndExpand"
-                                 WidthRequest="70"
+                                 WidthRequest="80"
                                  Clicked="ImageButton_Clicked_1" />
 
                         <ImageButton Source="calculadora.png"
@@ -46,6 +73,19 @@
                                      VerticalOptions="CenterAndExpand"
                                      WidthRequest="80"
                                      Clicked="ImageButton_Clicked_2"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Adicionales" 
+                               FontSize="22"/>
+                        <Label Text="¿Requiere obtener datos aleatorios de personas para alguna tarea en especifico?"/>
+                        <ImageButton Source="informacionPersonal.png"
+                                     BackgroundColor="Transparent"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="CenterAndExpand"
+                                     WidthRequest="60"
+                                     Clicked="ImageButton_Clicked_3"
+                                     Margin="20"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
