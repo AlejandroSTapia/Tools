@@ -13,8 +13,8 @@ using System.Text;
 namespace Tools.Droid
 {
 
-    [Activity(Label = "Caja de herramientas",
-        Icon = "@mipmap/icon",
+    [Activity(Label = "Tools",
+        Icon = "@mipmap/ic_launcher",
         Theme = "@style/newTheme",
         MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize )]
